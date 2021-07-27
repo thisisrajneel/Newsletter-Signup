@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/failure.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <title>Failure</title>
 </head>
 <body>
-    <h1>
-        Failure!
-    </h1>
+    <div>
+        <h1>
+            Uh-oh!
+        </h1>
+        <p>
+            There seems to be a problem with signing you up. Try again, or contact the developer.
+        </p>
+        <form action="/failure" method="post">
+            <button class="btn try btn-lg btn-warning" type="submit">Try again</button>
+        </form>
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 </html>

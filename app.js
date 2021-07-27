@@ -36,25 +36,30 @@ app.post('/', (req, res)=>{
     }
 
     const request = https.request(url, options, (response)=>{
+        
+        // response object is local
+        if(response.statusCode === 200) {
+            res.sendFile(__dirname + '/success.html');
+        }
+        else {
+            res.sendFile(__dirname + '/failure.html');
+        }
+
         response.on("data", (data)=>{
             console.log(JSON.parse(data));
         })
     })
+
     
-    if(response.statusCode === 200) {
-        res.sendFile(__dirname + '/success.html');
-    }
-    else {
-        res.sendFile(__dirname + '/failure.html');
-    }
 
     request.write(jsonData);
     request.end();
 })
 
+app.post('/failure', (req, res)=>{
+    res.redirect('/');
+})
+
 app.listen(3000, ()=>{
     console.log('server running on port 3000');
 })
-
-// API key : 8c6788ffb1725330b8043afe359103fe-us6
-// list ID : 43433fd176

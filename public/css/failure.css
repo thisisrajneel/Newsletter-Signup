@@ -1,0 +1,22 @@
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    padding: 40px 50px;
+    background-color: rgb(199, 205, 211);
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.try {
+    margin-top: 40px;
+}
