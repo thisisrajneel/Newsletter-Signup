@@ -1,6 +1,7 @@
 const express = require('express')
 const request = require('request')
-const https = require('https')
+const https = require('https');
+const { response } = require('express');
 
 const app = express();
 app.use(express.urlencoded({extended:true}));
@@ -39,6 +40,13 @@ app.post('/', (req, res)=>{
             console.log(JSON.parse(data));
         })
     })
+    
+    if(response.statusCode === 200) {
+        res.sendFile(__dirname + '/success.html');
+    }
+    else {
+        res.sendFile(__dirname + '/failure.html');
+    }
 
     request.write(jsonData);
     request.end();
