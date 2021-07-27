@@ -9,7 +9,7 @@
       content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
     />
     <meta name="generator" content="Hugo 0.84.0" />
-    <title>Signin Template · Bootstrap v5.0</title>
+    <title>Newsletter Signup</title>
 
     <link
       rel="canonical"
@@ -72,7 +72,7 @@
   </head>
   <body class="text-center">
     <main class="form-signin">
-      <form>
+      <form method="POST" action="/">
         <img
           class="mb-4"
           src="images/profilePic.png"
@@ -87,15 +87,17 @@
             type="text"
             class="form-control top"
             id="firstName"
+            name="fname"
             placeholder="John"
           />
           <label for="firstName">First Name</label>
         </div>
         <div class="form-floating">
           <input
-            type="password"
+            type="text"
             class="form-control middle"
             id="lastName"
+            name="lname"
             placeholder="Doe"
           />
           <label for="lastName">Last Name</label>
@@ -105,6 +107,7 @@
               type="email"
               class="form-control bottom"
               id="email"
+              name="email"
               placeholder="name@example.com"
             />
             <label for="email">E-mail</label>
